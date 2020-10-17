@@ -658,6 +658,9 @@ function buildSceneGraph(scene) {
         fontSize = scene.theme.size;
     } else if (parseFloat(scene.flags.size)) {
         fontSize = scene.flags.size;
+        if (scene.flags.fixedSize == null) {
+            fixedSize = true;
+        }
     }
 
     scene.font = {
